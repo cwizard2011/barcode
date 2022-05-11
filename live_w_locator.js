@@ -211,6 +211,7 @@ $(function() {
             },
             decoder: {
                 readers: function(value) {
+                    console.log({value})
                     if (value === 'ean_extended') {
                         return [{
                             format: "ean_reader",
@@ -274,6 +275,8 @@ $(function() {
         },
         lastResult : null
     };
+
+    console.log({App})
 
     App.init();
 
